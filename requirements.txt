@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+sqlalchemy[hrpc]
+psycopg2-binary
+pgvector
+deepface
+tf-keras
+python-multipart
+python-dotenv
