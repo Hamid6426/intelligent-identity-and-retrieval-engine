@@ -37,3 +37,14 @@ CONTAINER ID   IMAGE                                           COMMAND          
 67fa57f97c04   intelligent-identity-and-retrieval-engine-api   "uvicorn src.main:ap…"   11 seconds ago   Up 4 seconds              0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp   grabpic_api
 1b3876f7083c   pgvector/pgvector:pg16                          "docker-entrypoint.s…"   12 seconds ago   Up 10 seconds (healthy)   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp   grabpic_db
 ```
+
+## Database & ORM setup
+
+- We are using Postgres with pgvector extension for vector search capabilities.
+- SQLAlchemy is used as the ORM to define our database models and handle interactions with the database
+
+## API Endpoints
+
+- `POST /ingest`: Triggers the ingestion process to crawl the storage directory and process images in the background.
+- `GET /health`: Basic health check endpoint to verify that the API is running and responsive.
+- `GET /`: A welcome endpoint to confirm that the API is online.
